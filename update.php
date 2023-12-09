@@ -22,7 +22,7 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
         $produk = $input_produk;
     }
     
-    //Validasi apakah nama barang sudah dimasukkan dengan format yang benar
+    //Validasi apakah jumlah sudah dimasukkan dengan format yang benar
     $input_jumlah = trim($_POST["jumlah"]);
     if(empty($input_jumlah)){
         $jumlah_err = "Please enter the jumlah amount.";     

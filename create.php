@@ -12,7 +12,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $input_produk = trim($_POST["produk"]);
     if(empty($input_produk)){
         $produk_err = "Please enter a produk.";
-    } elseif(!filter_var($input_produk, FILTER_VALIDATE_REGEXP, array("options"=>array("regexp"=>"/^[a-zA-Z\s]+$/")))){
+    } elseif(!filter_var($input_produk, FILTER_VALIDATE_REGEXP, array("options"=>array("regexp"=>"/^[a-zA-Z\s]+$/")))){ //ketentuan format penulisan nama produk
         $produk_err = "Please enter a valid produk.";
     } else{
         $produk = $input_produk;
